@@ -1,0 +1,632 @@
+:root {
+  --r-background-color: #111827;
+  --r-main-color: #f8fafc;
+  --r-heading-color: #f8fafc;
+  --r-link-color: #6ee7d8;
+  --r-selection-background-color: #0e7490;
+  --accent: #6ee7d8;
+  --panel: #1e293b;
+  --panel-raised: #273449;
+  --muted: #cbd5e1;
+}
+
+.reveal {
+  font-family: "Aptos", "Segoe UI", sans-serif;
+  font-size: 34px;
+}
+
+.reveal h1,
+.reveal h2,
+.reveal h3 {
+  font-family: "Aptos Display", "Segoe UI", sans-serif;
+  text-transform: none;
+  font-weight: 700;
+  letter-spacing: -0.035em;
+}
+
+.reveal .slides section.slide {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 1.1rem 1.3rem 1rem;
+  text-align: left;
+}
+
+.reveal .slides > section.slide.present {
+  display: flex !important;
+}
+
+.slide {
+  overflow: hidden;
+}
+
+.reveal .slides section.slide img {
+  margin: 0;
+  max-width: none;
+  max-height: none;
+}
+
+.reveal .slides section.slide .portrait img,
+.reveal .slides section.slide .campus-image img,
+.reveal .slides section.slide .photo-pair img,
+.reveal .slides section.slide .student-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.reveal .slides section.slide .student-card > img {
+  height: 30%;
+}
+
+.cover {
+  justify-content: center;
+  background:
+    radial-gradient(ellipse at 82% 18%, rgb(14 116 144 / 30%), transparent 37%),
+    linear-gradient(135deg, #0b1220, #17243a 75%);
+}
+
+.cover h1 {
+  max-width: 13em;
+  margin: 0 0 0.42em;
+  color: var(--accent);
+  font-size: 2.45em;
+  line-height: 1.04;
+}
+
+.cover-subtitle {
+  max-width: 23em;
+  margin: 0;
+  font-size: 1.35em;
+  line-height: 1.18;
+}
+
+.cover-credit {
+  margin: 1.2em 0 0;
+  color: var(--muted);
+  font-size: 0.62em;
+}
+
+.slide-header {
+  flex: 0 0 auto;
+  margin: 0 0 0.55rem;
+}
+
+.slide-header .eyebrow,
+.perspective-label {
+  margin: 0 0 0.16em;
+  color: var(--accent);
+  font-size: 0.48em;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.slide-header h2 {
+  margin: 0;
+  font-size: 1.45em;
+  line-height: 1.03;
+}
+
+.slide-content {
+  flex: 1;
+  min-height: 0;
+}
+
+.card {
+  min-width: 0;
+  padding: 0.54em 0.62em;
+  border: 1px solid rgb(148 163 184 / 25%);
+  border-radius: 0.22em;
+  background: linear-gradient(145deg, var(--panel-raised), var(--panel));
+  box-shadow: 0 0.16em 0.5em rgb(0 0 0 / 12%);
+}
+
+.card h3 {
+  margin: 0 0 0.28em;
+  color: var(--accent);
+  font-size: 0.76em;
+  line-height: 1.12;
+}
+
+.card p {
+  margin: 0 0 0.34em;
+}
+
+.card p:last-child {
+  margin-bottom: 0;
+}
+
+.card-copy {
+  color: var(--muted);
+  font-size: 0.49em;
+  line-height: 1.23;
+}
+
+.card-copy p {
+  margin: 0 0 0.4em;
+}
+
+.card-copy p:last-child {
+  margin-bottom: 0;
+}
+
+.prompt-slide {
+  justify-content: center;
+  text-align: center !important;
+}
+
+.prompt-slide h2 {
+  margin: 0 0 0.65em;
+  color: var(--accent);
+  font-size: 2em;
+}
+
+.prompt-copy {
+  max-width: 26em;
+  margin: 0 auto;
+  font-size: 1.1em;
+  line-height: 1.3;
+}
+
+.prompt-copy p {
+  margin: 0 0 0.65em;
+}
+
+.prompt-2 h2 {
+  font-size: 2.2em;
+}
+
+.prompt-3 .prompt-copy {
+  max-width: 25em;
+  font-size: 1em;
+}
+
+.prompt-20 h2 {
+  font-size: 2.25em;
+}
+
+.profile-layout,
+.split-layout {
+  height: 100%;
+  display: grid;
+  grid-template-columns: minmax(0, 1.16fr) minmax(0, 0.84fr);
+  gap: 0.7rem;
+}
+
+.profile-copy,
+.large-copy {
+  align-self: stretch;
+  padding: 0.8em;
+}
+
+.profile-copy h3 {
+  font-size: 1em;
+}
+
+.profile-copy .role,
+.role {
+  color: #e2e8f0;
+  font-size: 0.54em;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.profile-copy .card-copy,
+.large-copy .card-copy {
+  font-size: 0.57em;
+  line-height: 1.32;
+}
+
+.portrait,
+.campus-image,
+.photo-pair,
+.screenshot-placeholder {
+  min-height: 0;
+  overflow: hidden;
+  border: 1px solid rgb(148 163 184 / 25%);
+  border-radius: 0.24em;
+  background: var(--panel);
+}
+
+.portrait img,
+.campus-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.campus-image img {
+  object-position: center 42%;
+}
+
+.photo-pair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 2.8em;
+  gap: 0.25em;
+  padding: 0.25em;
+}
+
+.photo-pair img {
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  object-fit: cover;
+}
+
+.photo-pair p {
+  grid-column: 1 / -1;
+  align-self: center;
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.34em;
+  line-height: 1.15;
+  text-align: center;
+}
+
+.agenda-grid {
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-rows: repeat(2, minmax(0, 1fr));
+  gap: 0.38rem;
+}
+
+.agenda-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0.46em 0.52em;
+}
+
+.agenda-card h3 {
+  font-size: 0.68em;
+}
+
+.agenda-card .card-copy {
+  font-size: 0.44em;
+}
+
+.photo-pair > p,
+.photo-label {
+  color: var(--muted);
+  font-size: 0.37em;
+  line-height: 1.1;
+}
+
+.people-grid,
+.goal-grid,
+.tool-grid,
+.rollout-grid,
+.takeaways-grid {
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.42rem;
+}
+
+.person-card,
+.tool-card,
+.rollout-card {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.person-photos {
+  display: flex;
+  gap: 0.18em;
+  height: 30%;
+  min-height: 0;
+}
+
+.reveal .slides section.slide .person-photos img {
+  width: 0;
+  height: 100%;
+  min-width: 0;
+  flex: 1;
+  object-fit: cover;
+  object-position: center 38%;
+  border-radius: 0.12em;
+}
+
+.person-card .photo-label {
+  margin: 0.25em 0;
+}
+
+.person-card h3 {
+  margin: 0 0 0.15em;
+}
+
+.person-card .role {
+  margin-bottom: 0.35em;
+}
+
+.person-card .card-copy {
+  font-size: 0.405em;
+  line-height: 1.19;
+}
+
+.goal-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-rows: repeat(2, minmax(0, 1fr));
+}
+
+.goal-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.goal-card .card-copy {
+  font-size: 0.53em;
+}
+
+.intern-layout {
+  height: 100%;
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 0.42rem;
+}
+
+.intern-copy,
+.student-grid {
+  min-height: 0;
+  display: grid;
+  gap: 0.36rem;
+}
+
+.intern-copy {
+  grid-template-rows: 1fr auto;
+}
+
+.intern-copy .card-copy {
+  font-size: 0.43em;
+  line-height: 1.2;
+}
+
+.sidenote {
+  padding: 0.4em 0.52em;
+  border-color: rgb(110 231 216 / 45%);
+}
+
+.student-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.student-card {
+  overflow: hidden;
+}
+
+.student-card img {
+  width: 100%;
+  height: 42%;
+  object-fit: cover;
+  object-position: center 35%;
+}
+
+.student-card .photo-label {
+  margin: 0.2em 0;
+}
+
+.student-card h3 {
+  margin-bottom: 0.26em;
+}
+
+.student-card .card-copy {
+  font-size: 0.42em;
+}
+
+.steps-grid {
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-rows: repeat(2, minmax(0, 1fr));
+  gap: 0.4rem;
+}
+
+.step-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0.56em 0.62em 0.56em 0.8em;
+  border: 1px solid rgb(148 163 184 / 24%);
+  border-radius: 0.22em;
+  background: linear-gradient(145deg, var(--panel-raised), var(--panel));
+}
+
+.step-number {
+  position: absolute;
+  top: 0.4em;
+  right: 0.45em;
+  color: var(--accent);
+  font-size: 0.44em;
+  font-weight: 700;
+}
+
+.step-card h3 {
+  margin: 0 0 0.22em;
+  color: var(--accent);
+  font-size: 0.72em;
+}
+
+.step-card .card-copy {
+  font-size: 0.48em;
+}
+
+.screenshot-placeholder {
+  display: grid;
+  place-items: center;
+  padding: 1em;
+  color: var(--muted);
+  font-size: 0.66em;
+  line-height: 1.2;
+  text-align: center;
+  background:
+    linear-gradient(135deg, rgb(110 231 216 / 9%) 25%, transparent 25%) 0 0 / 1em 1em,
+    linear-gradient(315deg, rgb(110 231 216 / 8%) 25%, transparent 25%) 0 0 / 1em 1em,
+    var(--panel);
+}
+
+.tool-card {
+  padding: 0.72em;
+}
+
+.tool-card h3 {
+  font-size: 0.85em;
+}
+
+.tool-card .card-copy {
+  font-size: 0.48em;
+  line-height: 1.28;
+}
+
+.tool-card .card-copy p:nth-child(2) {
+  margin-top: auto;
+  color: var(--accent);
+  font-weight: 700;
+  overflow-wrap: anywhere;
+}
+
+.slide-16 .tool-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.challenge-grid {
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-rows: repeat(2, minmax(0, 1fr));
+  gap: 0.4rem;
+}
+
+.challenge-card {
+  display: flex;
+  align-items: center;
+}
+
+.challenge-card .card-copy {
+  font-size: 0.46em;
+  line-height: 1.22;
+}
+
+.rollout-card {
+  padding: 0.44em;
+}
+
+.plot-placeholder {
+  min-height: 25%;
+  display: grid;
+  place-items: center;
+  margin-bottom: 0.36em;
+  padding: 0.35em;
+  border: 1px dashed rgb(110 231 216 / 45%);
+  border-radius: 0.14em;
+  color: var(--muted);
+  background: linear-gradient(135deg, rgb(110 231 216 / 6%), transparent);
+  font-size: 0.38em;
+  text-align: center;
+}
+
+.rollout-card h3 {
+  font-size: 0.62em;
+}
+
+.rollout-card .role {
+  margin-bottom: 0.24em;
+  font-size: 0.43em;
+}
+
+.rollout-card .card-copy {
+  font-size: 0.39em;
+  line-height: 1.17;
+}
+
+.takeaways-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.takeaway-card {
+  padding: 0.6em 0.7em;
+}
+
+.takeaway-card h3 {
+  font-size: 0.77em;
+}
+
+.takeaway-card .card-copy {
+  font-size: 0.455em;
+  line-height: 1.19;
+}
+
+.perspective {
+  justify-content: center;
+  padding: 1.4rem 1.8rem;
+  text-align: center !important;
+}
+
+.perspective-label {
+  margin-bottom: 0.38em;
+  font-size: 0.66em;
+}
+
+.perspective h2 {
+  max-width: 20em;
+  margin: 0 auto;
+  font-size: 1.8em;
+  line-height: 1.14;
+}
+
+.faculty .perspective-label {
+  color: #fbbf24;
+}
+
+.student .perspective-label {
+  color: #a5b4fc;
+}
+
+.closing-copy {
+  flex: 1;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.closing-copy h1 {
+  margin: 0 0 0.32em;
+  color: var(--accent);
+  font-size: 2.2em;
+}
+
+.closing-copy h2 {
+  margin: 0;
+  font-size: 1.3em;
+}
+
+.closing-copy p {
+  margin: 1.1em 0 0;
+  color: var(--muted);
+  font-size: 0.56em;
+}
+
+@media (max-width: 700px) {
+  .reveal {
+    font-size: 28px;
+  }
+
+  .slide {
+    padding: 0.8rem;
+  }
+
+  .people-grid,
+  .tool-grid,
+  .rollout-grid {
+    gap: 0.24rem;
+  }
+}
