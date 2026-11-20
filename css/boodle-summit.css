@@ -549,6 +549,7 @@
 }
 
 .tool-card .card-copy img {
+
   flex: 0 1 24%;
   margin: 0.2em 0;
 }
@@ -731,6 +732,19 @@
   overflow-wrap: anywhere;
 }
 
+.blockquote-container {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.2em;
+  width: min(100%, 52em);
+  margin: 0 auto;
+}
+
+.blockquote-item p {
+  margin: -0.5em 0 0;
+  font-size: 0.62em;
+}
+
 .perspective a,
 .card-copy a {
   overflow-wrap: anywhere;
@@ -745,20 +759,12 @@
 }
 
 .closing-copy {
+  flex: 1;
+  align-self: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: center;
-}
-
-.closing-slide .slide-content {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.closing-slide .closing-copy {
-  flex: 0 1 auto;
 }
 
 .closing-copy h1 {
@@ -791,5 +797,11 @@
   .tool-grid,
   .rollout-grid {
     gap: 0.24rem;
+  }
+
+  .blockquote-container {
+    font-size: 0.64em;
+    grid-template-columns: 1fr;
+    gap: 0.4em;
   }
 }
