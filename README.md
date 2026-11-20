@@ -3,10 +3,4 @@ Repository for a presentation I gave at the 2026 AI Campu Summit hosted by Boodl
 
 ## Reveal.js presentation
 
-Open `boodlebox-ai-summit.html` in a browser and use the arrow keys to navigate. Reveal.js and its plugins are bundled locally, along with copies of the presentation images in `images/`.
-
-To serve it locally, run `python -m http.server` from the repository root and open `http://localhost:8000/boodlebox-ai-summit.html`.
-
-To publish it on the web, enable GitHub Pages for the `main` branch and `/ (root)` folder in the repository settings. Once deployed, the presentation is available at `https://jhopkins77.github.io/BoodleBox-AI-Summit-Presentation/boodlebox-ai-summit.html`.
-
-To regenerate the HTML and image copies from the PowerPoint, run `python scripts/build_reveal.py`.
+This presentation was adapted from the [Reveal JS Framework](https://revealjs.com/) developed by [Hakim El Hattab](https://github.com/hakimel).
