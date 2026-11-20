@@ -10,6 +10,10 @@
   --muted: #cbd5e1;
 }
 
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
 .reveal {
   font-family: "Aptos", "Segoe UI", sans-serif;
   font-size: 34px;
@@ -42,9 +46,10 @@
 }
 
 .reveal .slides section.slide img {
+  display: block;
   margin: 0;
-  max-width: none;
-  max-height: none;
+  max-width: 100%;
+  max-height: 100%;
 }
 
 .reveal .slides section.slide .portrait img,
@@ -112,10 +117,13 @@
 .slide-content {
   flex: 1;
   min-height: 0;
+  min-width: 0;
 }
 
 .card {
   min-width: 0;
+  min-height: 0;
+  overflow: hidden;
   padding: 0.54em 0.62em;
   border: 1px solid rgb(148 163 184 / 25%);
   border-radius: 0.22em;
@@ -139,6 +147,8 @@
 }
 
 .card-copy {
+  min-width: 0;
+  overflow-wrap: anywhere;
   color: var(--muted);
   font-size: 0.75em;
   line-height: 1.53;
@@ -174,16 +184,17 @@
   margin: 0 0 0.65em;
 }
 
-.prompt-2 h2 {
+.opening-question-slide h2 {
   font-size: 2.2em;
 }
 
-.prompt-3 .prompt-copy {
+.disclaimer-slide .prompt-copy,
+.mentimeter-slide .prompt-copy {
   max-width: 25em;
   font-size: 1em;
 }
 
-.prompt-20 h2 {
+.test-title-slide h2 {
   font-size: 2.25em;
 }
 
@@ -217,6 +228,16 @@
 .large-copy .card-copy {
   font-size: 0.75em;
   line-height: 1.32;
+}
+
+.background-slide .large-copy .card-copy {
+  font-size: 0.62em;
+  line-height: 1.18;
+}
+
+.bot-architecture-slide .large-copy .card-copy {
+  font-size: 0.62em;
+  line-height: 1.18;
 }
 
 .portrait,
@@ -277,7 +298,7 @@
 .agenda-card {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   padding: 0.46em 0.52em;
 }
 
@@ -346,8 +367,8 @@
 }
 
 .person-card .card-copy {
-  font-size: 0.6em;
-  line-height: 1.19;
+  font-size: 0.66em;
+  line-height: 1.2;
 }
 
 .goal-grid {
@@ -388,6 +409,11 @@
   line-height: 1.2;
 }
 
+.student-builders-slide .intern-copy > .card:first-child .card-copy {
+  font-size: 0.6em;
+  line-height: 1.28;
+}
+
 .sidenote {
   padding: 0.4em 0.52em;
   border-color: rgb(110 231 216 / 45%);
@@ -398,12 +424,15 @@
 }
 
 .student-card {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
   overflow: hidden;
 }
 
 .student-card img {
   width: 100%;
-  height: 42%;
+  height: 36%;
   object-fit: cover;
   object-position: center 35%;
 }
@@ -417,7 +446,10 @@
 }
 
 .student-card .card-copy {
-  font-size: 0.42em;
+  min-height: 0;
+  overflow: hidden;
+  font-size: 0.4em;
+  line-height: 1.15;
 }
 
 .steps-grid {
@@ -455,7 +487,17 @@
 }
 
 .step-card .card-copy {
-  font-size: 0.48em;
+  font-size: 0.6em;
+  line-height: 1.25;
+}
+
+.methodology-slide .step-card h3 {
+  font-size: 0.95em;
+}
+
+.methodology-slide .step-card .card-copy {
+  font-size: 0.9em;
+  line-height: 1.2;
 }
 
 .screenshot-placeholder {
@@ -472,8 +514,43 @@
     var(--panel);
 }
 
+.screenshot-placeholder img {
+  width: 100%;
+  height: 100%;
+  min-width: 0;
+  min-height: 0;
+  object-fit: contain;
+}
+
 .tool-card {
   padding: 0.72em;
+}
+
+.tool-card > img,
+.tool-card .card-copy img {
+  width: 100%;
+  min-width: 0;
+  min-height: 0;
+  object-fit: contain;
+}
+
+.tool-card > img {
+  height: 24%;
+  flex: 0 1 24%;
+  margin: 0.2em 0;
+}
+
+.tool-card .card-copy {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.tool-card .card-copy img {
+  flex: 0 1 24%;
+  margin: 0.2em 0;
 }
 
 .tool-card h3 {
@@ -487,12 +564,75 @@
 
 .tool-card .card-copy p:nth-child(2) {
   margin-top: auto;
-  color: var(--accent);
   font-weight: 700;
   overflow-wrap: anywhere;
 }
 
-.slide-16 .tool-grid {
+.tools-slide .tool-card {
+  display: grid;
+  grid-template-rows: 1.6em 1.35em 3.8em minmax(2.8em, auto) 1.1em 1.45em;
+  grid-auto-rows: 1.45em;
+  align-content: start;
+  gap: 0.12em;
+}
+
+.tools-slide .tool-card .card-copy {
+  display: contents;
+}
+
+.tools-slide .tool-title,
+.tools-slide .tool-meta,
+.tools-slide .tool-image,
+.tools-slide .tool-description,
+.tools-slide .tool-link-label,
+.tools-slide .tool-link,
+.tools-slide .tool-extra-link {
+  min-width: 0;
+  margin: 0;
+}
+
+.tools-slide .tool-title {
+  grid-row: 1;
+  align-self: start;
+}
+
+.tools-slide .tool-meta {
+  grid-row: 2;
+  align-self: start;
+}
+
+.tools-slide .tool-image {
+  grid-row: 3;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.tools-slide .tool-description {
+  grid-row: 4;
+  align-self: start;
+}
+
+.tools-slide .tool-card .card-copy p.tool-description {
+  margin: 0;
+}
+
+.tools-slide .tool-link-label {
+  grid-row: 5;
+  align-self: start;
+}
+
+.tools-slide .tool-link {
+  grid-row: 6;
+  align-self: start;
+}
+
+.tools-slide .tool-extra-link {
+  grid-row: 7;
+  align-self: start;
+}
+
+.tools-slide .tool-grid {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
@@ -510,8 +650,8 @@
 }
 
 .challenge-card .card-copy {
-  font-size: 0.46em;
-  line-height: 1.22;
+  font-size: 0.52em;
+  line-height: 1.24;
 }
 
 .rollout-card {
@@ -519,7 +659,7 @@
 }
 
 .plot-placeholder {
-  min-height: 25%;
+  min-height: 20%;
   display: grid;
   place-items: center;
   margin-bottom: 0.36em;
@@ -542,8 +682,8 @@
 }
 
 .rollout-card .card-copy {
-  font-size: 0.39em;
-  line-height: 1.17;
+  font-size: 0.48em;
+  line-height: 1.2;
 }
 
 .takeaways-grid {
@@ -559,8 +699,8 @@
 }
 
 .takeaway-card .card-copy {
-  font-size: 0.455em;
-  line-height: 1.19;
+  font-size: 0.52em;
+  line-height: 1.2;
 }
 
 .perspective {
@@ -581,6 +721,21 @@
   line-height: 1.14;
 }
 
+.perspective blockquote {
+  width: auto;
+  max-width: 24em;
+  margin: 0.9em auto;
+  padding: 0.35em 0.55em;
+  font-size: 0.72em;
+  line-height: 1.3;
+  overflow-wrap: anywhere;
+}
+
+.perspective a,
+.card-copy a {
+  overflow-wrap: anywhere;
+}
+
 .faculty .perspective-label {
   color: #fbbf24;
 }
@@ -590,12 +745,20 @@
 }
 
 .closing-copy {
-  flex: 1;
-  align-self: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: center;
+}
+
+.closing-slide .slide-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.closing-slide .closing-copy {
+  flex: 0 1 auto;
 }
 
 .closing-copy h1 {
