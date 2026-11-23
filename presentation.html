@@ -1,0 +1,595 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<title>BoodleBox AI Summit Presentation</title>
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/night.css">
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+		<link rel="stylesheet" href="css/boodle-summit.css">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section class="slide-group group-1">
+					<section class="slide slide-1 cover cover-slide">
+						<br>
+						<br>
+						<br>
+						<br>
+						<h1>A RAG’s-to-Riches Story</h1>
+						<p class="cover-subtitle">How Bryn Mawr Used BoodleBox to Develop Virtual TA’s for Academic Courses</p>
+						<p class="cover-credit">Jeff Hopkins  |  Educational Technology Specialist, Bryn Mawr College</p>
+					</section>
+					<section class="slide slide-2 prompt-slide disclaimer-slide">
+						<div class="prompt-copy">
+							<br>
+							<br>
+							<br>
+							<br>
+<<<<<<< HEAD:boodlebox-ai-summit.html
+=======
+							<h2>Disclaimer</h2>
+>>>>>>> a0a3d1f06de684d4a68a887de36801346d9216d9:presentation.html
+							<p>I did use AI to help build this presentation. That includes:</p>
+							<ul>
+								<li>BoodleBox's <a href="https://www.boodlebox.com/conference-presentation-builder">Conference Presentation Builder</a></li>
+								<li>Github Copilot</li>
+							</ul>
+							<br>
+						</div>
+						<p>This an AI conference, after all.</p>
+					</section>
+				</section>
+				<section class="slide slide-3 prompt-slide opening-question-slide">
+					<h2>Opening Question</h2>
+					<div class="prompt-copy">
+						<p>Join the Menti at menti.com</p>
+						<p>Code to join is: 2536 1855</p>
+						<div style='position: relative; padding-bottom: 56.25%; padding-top: 35px; height: 0; overflow: hidden;'>
+							<iframe sandbox='allow-popups allow-scripts allow-same-origin allow-presentation' allow='autoplay; fullscreen; encrypted-media; picture-in-picture' allowfullscreen='true' allowtransparency='true' frameborder='0' height='315' src='https://www.mentimeter.com/app/presentation/alu9f12fjw7baew7i33ownsv56p3bdcm/embed' style='position: absolute; top: 0; left: 0; width: 100%; height: 100%;' width='420'></iframe></div>
+					</div>
+				</section>
+				<section class="slide-group group-2">
+					<section class="slide slide-4 content-slide profile-slide">
+						<header class="slide-header">
+							<h2>Who am I?</h2>
+						</header>
+						<div class="slide-content">
+							<div class="profile-layout">
+								<article class="card profile-copy">
+									<h3>Jeff Hopkins</h3>
+									<p class="role">Educational Technology Specialist — Bryn Mawr College</p>
+									<div class="card-copy">
+										<p>I assist students, faculty, &amp; staff with anything related to teaching and research:</p>
+										<p>•  LMS (Moodle)</p>
+										<p>•  Key SAAS systems (Panopto, Zoom, NameCoach, etc.)</p>
+										<p>•  Digital scholarship &amp; data science tools (GIS, command line, Jupyter notebooks)</p>
+										<p>•  Makerspace tools (3D scanners, 3D printers, laser cutters, Adobe Creative Suite)</p>
+										<p>•  And now... AI Tools</p>
+									</div>
+								</article>
+								<div class="portrait">
+									<img src="images/image1.png" alt="Photo from the PowerPoint">
+								</div>
+							</div>
+						</div>
+					</section>
+					<section class="slide slide-5 content-slide campus-slide">
+						<header class="slide-header">
+							<h2>Where do I work again?</h2>
+						</header>
+						<div class="slide-content">
+							<div class="split-layout">
+								<article class="card large-copy">
+									<div class="card-copy">
+										<p>•  Bryn Mawr College: Bryn Mawr = 'Big Hill' in Welsh</p>
+										<p>•  Historic Women's Liberal Arts College: One of the historic 'Seven Sisters' colleges, located outside Philadelphia</p>
+										<p>•  Student Body: Under 1,300 full-time undergraduate students + ~300 graduate students</p>
+										<p>•  LITS Department: Combined Library and Information Technology Services department</p>
+										<p>•  EAST Sub-Team: Educational and Scholarly Technology sub-team, supporting teaching, learning, and research innovation</p>
+									</div>
+								</article>
+								<div class="campus-image"><img src="images/image2.jpg" alt="Bryn Mawr College campus"></div>
+							</div>
+						</div>
+					</section>
+				</section>
+				<section class="slide slide-6 content-slide agenda-slide">
+					<header class="slide-header">
+						<h2>Today's Agenda</h2>
+					</header>
+					<div class="slide-content">
+						<div class="agenda-grid">
+							<article class="card agenda-card">
+								<h3>01  |</h3>  
+								<h3>Background on the Project</h3>
+							</article>
+							<article class="card agenda-card">
+								<h3>02  |</h3>
+								<h3>Introduction of Key Players</h3>
+							</article>
+							<article class="card agenda-card">
+								<h3>03  |</h3>
+								<h3>Overview of the Three Virtual TAs</h3>
+							</article>
+							<article class="card agenda-card">
+								<h3>04  | </h3>
+								<h3>Development Process &amp; Challenges</h3>
+							</article>
+							<article class="card agenda-card">
+								<h3>05  | </h3>
+								<h3>Current Status, Lessons &amp; Next Steps</h3>
+							</article>
+							<article class="card agenda-card">
+								<h3>06  | </h3>
+								<h3>Q&amp;A</h3>
+							</article>
+						</div>
+					</div>
+				</section>
+				<section class="slide-group group-3">
+					<section class="slide slide-7 prompt-slide mentimeter-slide">
+						<div class="prompt-copy">
+							<div style='position: relative; padding-bottom: 56.25%; padding-top: 35px; height: 0; overflow: hidden;'>
+								<iframe sandbox='allow-popups allow-scripts allow-same-origin allow-presentation' allow='autoplay; fullscreen; encrypted-media; picture-in-picture' allowfullscreen='true' allowtransparency='true' frameborder='0' height='315' src='https://www.mentimeter.com/app/presentation/alu9f12fjw7baew7i33ownsv56p3bdcm/embed' style='position: absolute; top: 0; left: 0; width: 100%; height: 100%;' width='420'></iframe></div>
+						</div>
+					</section>
+					<section class="slide slide-8 content-slide background-slide">
+						<header class="slide-header">
+							<h2>Project Background &amp; The AI Landscape</h2>
+						</header>
+						<div class="slide-content">
+							<div class="split-layout">
+								<article class="card large-copy">
+									<div class="card-copy">
+										<p>•  The College Context: As a small liberal arts college, Bryn Mawr is still in the 'figuring things out' stage of adopting AI. No college-wide policy yet, but students and faculty are actively using it.</p>
+										<p>•  Existing AI Touchpoints: AI features had trickled into existing toolsets (Microsoft 365, Zoom, Adobe Creative Cloud), but we lacked a dedicated, pedagogical AI platform.</p>
+										<p>•  The Catalyst: Chris Barth, LITS Chief Information Officer (CIO), established a BoodleBox pilot in late 2025, which expanded into a full institution-wide license.</p>
+										<p>•  The Opportunity: Since BoodleBox is built specifically as an educational technology, the EAST team immediately began exploring hands-on pedagogical use cases.</p>
+										<p>•  The Idea: EAST supervisor Jenny Spohrer proposed integrating BoodleBox into our existing Digital Technology Internship (DTI) program.</p>
+									</div>
+								</article>
+								<div class="photo-pair">
+									<img src="images/CBBioPic.jpg" alt="Chris Barth portrait">
+									<img src="images/JSBioPic.jpg" alt="Jenny Spohrer portrait">
+									<p>[ Photo: Chris Barth (LITS VP &amp;CIO) &amp;<br>Jenny Spohrer (EAST Supervisor) ]</p>
+								</div>
+							</div>
+						</div>
+					</section>
+					<section class="slide slide-9 content-slide faculty-recruitment-slide">
+						<header class="slide-header">
+							<p class="eyebrow">KEY PLAYERS</p>
+							<h2>Recruitment: Faculty Partners</h2>
+						</header>
+						<div class="slide-content">
+							<div class="people-grid">
+								<article class="card person-card">
+									<div class="person-photos"><img src="images/GDBioPic.jpg" alt="Greg Davis portrait"></div>
+									<p class="photo-label">[ Photo: Greg Davis ]</p>
+									<h3>Greg Davis</h3>
+									<p class="role">Associate Professor of Biology</p>
+									<div class="card-copy">
+										<p>One of our earliest partners. Wanted an AI Virtual TA for Evolutionary Biology (BIOL 202) to guide students through complex conceptual review.</p>
+									</div>
+								</article>
+								<article class="card person-card">
+									<div class="person-photos"><img src="images/EABioPic.jpeg" alt="Evan Arena portrait"><img src="images/XCBioPic.jpg" alt="Xuemei Cheng portrait"></div>
+									<p class="photo-label">[ Photo: Evan Arena &amp; May Cheng ]</p>
+									<h3>Evan Arena &amp; Xuemei 'May' Cheng</h3>
+									<p class="role">Physics Faculty</p>
+									<div class="card-copy">
+										<p>Greg connected us with Evan, who brought in May. Wanted a course-specific physics chatbot (Phys121 Quanta) to support problem solving.</p>
+									</div>
+								</article>
+								<article class="card person-card">
+									<div class="person-photos"><img src="images/ARBioPic.jpg" alt="Asja Radja portrait"></div>
+									<p class="photo-label">[ Photo: Asja Radja &amp; Mark Maitlin ]</p>
+									<h3>Asja Radja &amp; Mark Maitlin</h3>
+									<p class="role">Quantitative Methods / Physics</p>
+									<div class="card-copy">
+										<p>Connected via colleague Tessa Eisen. Wanted targeted exam feedback and math support for intro-level quantitative methods.</p>
+									</div>
+								</article>
+							</div>
+						</div>
+					</section>
+					<section class="slide slide-10 prompt-slide mentimeter-slide">
+						<div style='position: relative; padding-bottom: 56.25%; padding-top: 35px; height: 0; overflow: hidden;'>
+							<iframe sandbox='allow-popups allow-scripts allow-same-origin allow-presentation' allow='autoplay; fullscreen; encrypted-media; picture-in-picture' allowfullscreen='true' allowtransparency='true' frameborder='0' height='315' src='https://www.mentimeter.com/app/presentation/alu9f12fjw7baew7i33ownsv56p3bdcm/embed' style='position: absolute; top: 0; left: 0; width: 100%; height: 100%;' width='420'></iframe>
+						</div>
+					</section>
+					<section class="slide slide-11 perspective perspective-slide faculty faculty-perspective-slide">
+						<p class="perspective-label">Faculty perspective</p>
+						<h2>Why were you interested in using AI? </h2>
+						<blockquote>"I often struggle to get students to come to office hours for various reasons. I wondered if there was a way that I could use AI to field questions from students 24/7. Would something like a Digital TA (chat bot), trained on my course material, fit the bill?"</blockquote>
+						<p>-Greg Davis</p>
+					</section>
+					<section class="slide slide-12 content-slide goals-slide">
+						<header class="slide-header">
+							<h2>Common Faculty Goals</h2>
+						</header>
+						<div class="slide-content">
+							<div class="goal-grid">
+								<article class="card goal-card">
+									<h3>Deepening Course Engagement</h3>
+									<div class="card-copy">
+										<p>Not all students feel comfortable coming to office hours or asking questions in front of peers. A virtual TA lowers the barrier to seeking help 24/7.</p>
+									</div>
+								</article>
+								<article class="card goal-card">
+									<h3>'Saving' Students from Generic Bots</h3>
+									<div class="card-copy">
+										<p>Steering students away from unvetted, hallucination-prone general AI. Instead, provide a bot grounded directly in faculty course materials.</p>
+									</div>
+								</article>
+								<article class="card goal-card">
+									<h3>Scaling Review &amp; Feedback</h3>
+									<div class="card-copy">
+										<p>Individual detailed feedback on every practice problem or exam question is difficult to scale. Virtual TAs help fill this critical instructional gap.</p>
+									</div>
+								</article>
+								<article class="card goal-card">
+									<h3>Curated Resource Direction</h3>
+									<div class="card-copy">
+										<p>Directing students to vetted professor materials and high-quality public resources (e.g., Khan Academy) when extra help is needed.</p>
+									</div>
+								</article>
+							</div>
+						</div>
+					</section>	
+				</section>
+				<section class="slide-group group-4">
+					<section class="slide slide-13 content-slide student-builders-slide">
+						<header class="slide-header">
+							<p class="eyebrow">KEY PLAYERS</p>
+							<h2>Recruitment: Student Builders (DTI's)</h2>
+						</header>
+						<div class="slide-content">
+							<div class="intern-layout">
+								<div class="intern-copy">
+									<article class="card">
+										<h3>Digital Technology Internship</h3>
+										<div class="card-copy">
+											<p>•  LITS student employment program pairing student tech interns with institutional projects</p>
+											<p>•  Past cohorts built website metadata, enrollment data visualisations, and Registrar training videos</p>
+											<p>•  Piloted BoodleBox development with two exceptionally talented student builders</p>
+											<p>•  Interns drove custom bot building, model testing, and iterative refinements</p>
+										</div>
+									</article>
+									<article class="card sidenote">
+										<div class="card-copy">
+											<h3>Sidenote: Other DTI AI Projects</h3>
+											<p>• OCR tool for digitizing handwritten field notes<br>• Korean language chatbot for conversational modalities &amp; feedback<br><strong>Happy to talk about these after the presentation!</strong></p>
+										</div>
+									</article>
+								</div>
+								<div class="student-grid">
+									<article class="card student-card">
+										<img src="images/PSBioPic.jpeg" alt="Pragya Silwal portrait">
+										<h3>Pragya Silwal</h3>
+										<div class="card-copy">
+											<p>Economics Major<br>Class of 2027</p>
+											<blockquote>"Every day, Yumna and I were able to hop on a learning adventure and collect ideas to experiment with. This was not just fun, but also instrumental in shaping the vision of our AI tools and defining what’s possible at an institution like Bryn Mawr.”</blockquote>
+										</div>
+									</article>
+									<article class="card student-card">
+										<img src="images/YDarBioPic.jpeg" alt="Yumna Fatima Dar portrait">
+										<h3>Yumna Fatima Dar</h3>
+										<div class="card-copy">
+											<p>Computer Science Major<br>Class of 2029</p>
+											<blockquote>"I was interested in exploring how AI could be used to create Ed-tech tools that enhanced the classroom learning experience. Course-specific chatbots, specifically RAG agents, seemed like a really useful tool ...”</blockquote>
+										</div>
+									</article>
+								</div>
+							</div>
+						</div>
+					</section>
+					<section class="slide slide-14 content-slide methodology-slide">
+						<header class="slide-header">
+							<p class="eyebrow">DEVELOPMENT WORKFLOW</p>
+							<h2>Project Methodology: The Build Process</h2>
+						</header>
+						<div class="slide-content">
+							<div class="steps-grid">
+								<article class="step-card">
+									<h3>1. Scoping</h3>
+									<div class="card-copy">
+										<p>Project charter defining scope, goals, course alignment</p>
+									</div>
+								</article>
+								<article class="step-card">
+									<h3>2. Initial Builds</h3>
+									<div class="card-copy">
+										<p>Custom Bots built in BoodleBox with uploaded knowledge</p>
+									</div>
+								</article>
+								<article class="step-card">
+									<h3>3. Faculty Review</h3>
+									<div class="card-copy">
+										<p>Professors test bots and provide targeted feedback</p>
+									</div>
+								</article>
+								<article class="step-card">
+									<h3>4. Iteration</h3>
+									<div class="card-copy">
+										<p>Refining bot prompts, guardrails, and knowledge docs</p>
+									</div>
+								</article>
+								<article class="step-card">
+									<h3>5. Student Testing</h3>
+									<div class="card-copy">
+										<p>Piloting bots with real student cohorts</p>
+									</div>
+								</article>
+								<article class="step-card">
+									<h3>6. Wrap-up</h3>
+									<div class="card-copy">
+										<p>Final adjustments, documentation, and LMS links</p>
+									</div>
+								</article>
+							</div>
+						</div>
+					</section>
+				</section>
+				<section class="slide-group group-5">
+					<section class="slide slide-15 perspective perspective-slide student student-perspective-slide">
+						<p class="perspective-label">Student Perspective</p>
+						<h2><br>How did you go about building these tools? </h2>
+						<blockquote>"We initially set out to build our own RAG agents...As we progressed, we explored BoodleBox as a platform for developing and deploying these tools. We uploaded course-specific materials into the chatbots' knowledge bases so that they could retrieve relevant information and refer back to faculty-provided resources when responding to students.”</blockquote>
+						<p>-Yumna</p>
+					</section>
+					<section class="slide slide-16 content-slide bot-architecture-slide">
+						<header class="slide-header">
+							<p class="eyebrow">BOT ARCHITECTURE</p>
+							<h2>How These Tools Were Built: Custom Bot Variables</h2>
+						</header>
+						<div class="slide-content">
+							<div class="split-layout">
+								<article class="card large-copy">
+									<div class="card-copy">
+										<p>•  Model Selection: Which underlying LLM best balances reasoning capability, pedagogical tone, and reliability? (Tested ChatGPT and Claude versions)</p>
+										<p>•  Prompt Instructions &amp; Guardrails: What exact behavioral guidelines ensure the bot engages in Socratic questioning rather than just giving away direct answers?</p>
+										<p>•  Knowledge Bank &amp; Course Materials: What documents should the bot ingest? Should it contain the full semester syllabus/materials or only content covered to date?</p>
+										<p>•  Scope &amp; Boundaries: Should the bot restrict answers solely to course content, or direct students to vetted external resources for broader context?</p>
+									</div>
+								</article>
+								<div class="screenshot-placeholder">
+									<img src="images/BoodleBox_Prez_CustomBotBuilder_Screenshot.png" alt="Screenshot of BoodleBox Custom Bot Builder interface">
+								</div>
+							</div>
+						</div>
+					</section>
+					<section class="slide slide-17 content-slide tools-slide">
+						<header class="slide-header">
+							<p class="eyebrow">LIVE TOOLS</p>
+							<h2>The Resulting Tools: 3 Virtual TAs</h2>
+						</header>
+						<div class="slide-content">
+							<div class="tool-grid">
+								<article class="card tool-card">
+									<h3 class="tool-title">Biology Virtual TA</h3>
+									<div class="card-copy">
+										<p class="tool-meta">Prof. Greg Davis | BIOL 202</p>
+										<img class="tool-image" src="images/BoodleBox_Prez_BioVirtualTA_Screenshot.png" alt="Screenshot of Biology Virtual TA interface">
+										<p class="tool-description">Evolutionary biology conceptual assistant guiding students through core principles and terminology via Socratic inquiry.</p>
+										<p class="tool-link-label">🔗 Live Link:</p>
+										<p class="tool-link"><a href="https://box.boodle.ai/a/@biol2.02" target="_blank" rel="noopener noreferrer">box.boodle.ai/a/@biol2.02</a></p>
+									</div>
+								</article>
+								<article class="card tool-card">
+									<h3 class="tool-title">Phys121 Quanta</h3>
+									<img class="tool-image" src="images/BoodleBox_Prez_PhysicsVirtualTA_Screenshot.png" alt="Screenshot of Phys121 Quanta interface">
+									<div class="card-copy">
+										<p class="tool-meta">Prof. Evan Arena &amp; Prof. Xuemei 'May' Cheng</p>
+										<p class="tool-description">Introductory physics tutor providing problem-solving guidance, formula application, and conceptual coaching.</p>
+										<p class="tool-link-label">🔗 Live Link:</p>
+										<p class="tool-link"><a href="https://box.boodle.ai/a/@Phys121f26Claude" target="_blank" rel="noopener noreferrer">box.boodle.ai/a/@Phys121f26Claude</a></p>
+									</div>
+								</article>
+								<article class="card tool-card">
+									<h3 class="tool-title">Quantitative Assistant</h3>
+									<div class="card-copy">
+										<p class="tool-meta">Prof. Asja Radja &amp; Prof. Mark Maitlin</p>
+										<img class="tool-image" src="images/BoodleBox_Prez_QuantVirtualTA_Screenshot.png" alt="Screenshot of Quantitative Assistant interface">
+										<p class="tool-description">Math and quantitative methods tutor pairing exam feedback with Khan Academy and curated open resources.</p>
+										<p class="tool-link-label">🔗 Live Link:</p>
+										<p class="tool-link"><a href="https://box.boodle.ai/a/@QuantAssistant" target="_blank" rel="noopener noreferrer">box.boodle.ai/a/@QuantAssistant</a></p>
+										<p class="tool-extra-link"><a href="https://asjaradja.github.io/Cottrell_Math_Tutor/" target="_blank" rel="noopener noreferrer">Math Tutor Site</a></p>
+									</div>
+								</article>
+							</div>
+						</div>
+					</section>
+				</section>
+				<section class="slide-group group-6">
+					<section class="slide slide-18 prompt-slide mentimeter-slide">
+						<div style='position: relative; padding-bottom: 56.25%; padding-top: 35px; height: 0; overflow: hidden;'>
+							<iframe sandbox='allow-popups allow-scripts allow-same-origin allow-presentation' allow='autoplay; fullscreen; encrypted-media; picture-in-picture' allowfullscreen='true' allowtransparency='true' frameborder='0' height='315' src='https://www.mentimeter.com/app/presentation/alu9f12fjw7baew7i33ownsv56p3bdcm/embed' style='position: absolute; top: 0; left: 0; width: 100%; height: 100%;' width='420'></iframe>
+						</div>
+					</section>
+					<section class="slide slide-19 perspective perspective-slide student student-perspective-slide">
+						<p class="perspective-label">Faculty Perspective</p>
+						<h2><br>What were some challenges you faced while building these tools? </h2>
+<<<<<<< HEAD:boodlebox-ai-summit.html
+						<blockquote> ""As I got into it and spoke with colleagues, the challenge came more into focus: how do we create an AI tool that supports the learning process rather than simply offering up short cuts?”"</blockquote>
+=======
+						<blockquote> "As I got into it and spoke with colleagues, the challenge came more into focus: how do we create an AI tool that supports the learning process rather than simply offering up short cuts?"</blockquote>
+>>>>>>> a0a3d1f06de684d4a68a887de36801346d9216d9:presentation.html
+						<p>-Greg Davis</p>
+					</section>
+					<section class="slide slide-20 content-slide challenges-slide">
+						<header class="slide-header">
+							<p class="eyebrow">LESSONS &amp; SOLUTIONS</p>
+							<h2>Challenges Encountered Along the Way</h2>
+						</header>
+						<div class="slide-content">
+							<div class="challenge-grid">
+								<article class="card challenge-card">
+									<div class="card-copy">
+										<p>•  Direct Answers vs. Socratic Inquiry: Challenge: Should bots give information directly or prompt deeper thinking?<br>Solution: Socratic questioning by default; bot steps in with direct hints if student is genuinely stuck.</p>
+									</div>
+								</article>
+								<article class="card challenge-card">
+									<div class="card-copy">
+										<p>•  External Resource Curation: Challenge: What external materials should the bot recommend?<br>Solution: Settled on high-quality, publicly available resources (e.g., Khan Academy for quantitative prep).</p>
+									</div>
+								</article>
+								<article class="card challenge-card">
+									<div class="card-copy">
+										<p>•  Model Selection Discretion: Challenge: ChatGPT vs. Claude models behaved differently across disciplines.<br>Solution: Student interns built dual versions; professors chose their preferred model while archiving the other.</p>
+									</div>
+								</article>
+								<article class="card challenge-card">
+									<div class="card-copy">
+										<p>•  Gamification &amp; Engagement: Challenge: Keeping students motivated to engage repeatedly.<br>Solution: Pragya implemented a 'point counter' system tracking progress through modules.</p>
+									</div>
+								</article>
+								<article class="card challenge-card">
+									<div class="card-copy">
+										<p>•  LMS Integration vs. Linking: Challenge: Embedding tools directly into Moodle course pages.<br>Solution: Full iframe integration wasn't viable; settled on prominent deep-linking within Moodle courses.</p>
+									</div>
+								</article>
+							</div>
+						</div>
+					</section>
+					<section class="slide slide-21 content-slide rollout-slide">
+						<header class="slide-header">
+							<h2>Classroom Implementation &amp; Usage</h2>
+						</header>
+						<div class="slide-content">
+							<div class="rollout-grid">
+								<article class="card rollout-card">
+									<h3>Quantitative Assistant (Asja &amp; Mark)</h3>
+									<p class="role">Implemented This Semester</p>
+									<div class="card-copy">
+										<p>• Asja Introduced to students for exam review and quantitative prep at the start of the semester.</p>
+										<p>• Overall, four students out of 71 opened the bot...and then never opened it again.</p>
+										<p>• The rest of the class did not use it &#128542</p>
+									</div>
+								</article>
+								<article class="card rollout-card">
+									<h3>Phys121 Quanta (May &amp; Evan)</h3>
+									<p class="role">Implemented This Semester</p>
+									<div class="card-copy">
+										<p>• Jeff visited May's early-semester class to introduce &amp; demo the bot</p>
+										<p>• Since then, four students out of 15 have used the bot.</p>
+										<p>• BoodleBox doesn't allow data on individuals' bot usage to be disaggregated, but each of the four students has used BoodleBox a good amount (some exceptionally so).</p>
+										<br>
+										<img src="images/PHYS121StudentsBotUsage.png" alt="Screenshot of Phys121 Quanta usage metrics"></img>
+									</div>
+								</article>
+								<article class="card rollout-card">
+									<h3>Evolutionary Biology TA (Greg)</h3>
+									<p class="role">Spring Rollout Planned</p>
+									<div class="card-copy">
+										<p>• Final testing and refinement completed during the summer</p>
+										<p>• Set to launch for full student use in the upcoming Spring term</p>
+										<p>• I'm hoping to meet Greg soon to plan things like a class visit to demo the tool.</p>
+									</div>
+								</article>
+							</div>
+						</div>
+					</section>
+				</section>
+				<section class="slide-group group-7">
+					<section>
+						<div class="prompt-copy">
+							<h2>Let’s Test!</h2>
+							<p>Rather than me telling you about the bots, try them out! Links are in the presentation space on Whova. Give me your thoughts on Mentimeter!</p>
+						</div>
+					</section>
+					<section>
+						<div style='position: relative; padding-bottom: 56.25%; padding-top: 35px; height: 0; overflow: hidden;'>
+							<iframe sandbox='allow-popups allow-scripts allow-same-origin allow-presentation' allow='autoplay; fullscreen; encrypted-media; picture-in-picture' allowfullscreen='true' allowtransparency='true' frameborder='0' height='158' src='https://www.mentimeter.com/app/presentation/alu9f12fjw7baew7i33ownsv56p3bdcm/embed' style='position: absolute; top: 0; left: 0; width: 100%; height: 100%;' width='420'></iframe>
+						</div>
+					</section>
+				</section>
+				</section>
+				<section class="slide-group group-8">
+					<section class="slide slide-25 content-slide takeaways-slide">
+						<header class="slide-header">
+							<p class="eyebrow">KEY TAKEAWAYS</p>
+							<h2>Lessons Learned &amp; Next Steps</h2>
+						</header>
+						<div class="slide-content">
+							<div class="takeaways-grid">
+								<article class="card takeaway-card">
+									<h3>Key Lessons Learned</h3>
+									<div class="card-copy">
+										<p>• Be thorough in writing instructions: Precise prompt phrasing and behavioral boundary definitions are critical for pedagogical bots.</p>
+										<p>• Course materials make the bot: High-quality, professor-created materials are the single best foundation for domain-specific RAG performance.</p>
+										<p>• Faculty are essential partners: Professors are irreplaceable for evaluating bot nuances, factual precision, and educational efficacy.</p>
+										<p>• The bot needs to be the center if it’s to be used: The PHYS 101 bot wasn’t used as much because it was buried within the site. </p>
+									</div>
+								</article>
+								<article class="card takeaway-card">
+									<h3>Next Steps</h3>
+									<div class="card-copy">
+										<p>• Spring Rollout of BIOL 202 TA: Deploying Greg Davis's biology assistant with full semester tracking.</p>
+										<p>• Expanding Faculty Cohorts: Recruiting additional STEM and Humanities faculty for custom bot pilots.</p>
+										<p>• Enhanced Assessment &amp; Learning Analytics: Measuring student learning outcomes and engagement patterns across courses.</p>
+										<p>• DTI Program Continuation: Training future student intern cohorts to lead bot maintenance and prompt engineering.</p>
+										<p>• Integration: are there ways to integrate this bot with other platforms (e.g., Moodle)? Also, can the bot remain centered if we integrate it into something else.</p>
+									</div>
+								</article>
+							</div>
+						</div>
+					</section>
+					<section class="slide slide-27 perspective perspective-slide student student-perspective-slide">
+						<p class="perspective-label">Student Perspective</p>
+						<h2><br>Lessons learned from building these tools?</h2>
+						<div class="blockquote-container">
+							<div class="blockquote-item">
+								<blockquote>"“This internship has exposed me to how exciting the process of making something happen is, specifically those that positively affect so many of us.”</blockquote>
+								<p>-Pragya</p>
+							</div>
+							<div class="blockquote-item">
+								<blockquote>I think there is a lot of potential for AI to make education more accessible and interactive, provided we approach its implementation thoughtfully and prioritize the student learning experience. ​</blockquote>
+								<p>-Yumna</p>
+							</div>
+						</div>
+					</section>
+				</section>
+				<section class="slide-group group-9">
+					<section class="slide slide-28 content-slide closing-slide">
+						<div class="slide-content">
+							<div class="closing-copy">
+								<br>
+								<br>
+								<br>
+								<br>
+								<br>
+								<h1>Questions &amp; Discussion</h1>
+								<h2>The floor is open!</h2>
+							</div>
+						</div>
+					</section>
+					<section class="slide slide-29 attribution-slide">
+						<h2>Attribution<h2>
+						<p>This presentation was built using an adaptation of the <a href="https://revealjs.com/">Reveal JS framework</a> developed by <a href="https://github.com/hakimel">Hakim El Hattab</a>.</p>
+					</section>
+					<section class="slide slide-30 thanks-slide">
+						<h2>Final Thanks</h2>
+						<p>Special thanks to everyone I worked with on this project, particularly Pragya Silwal &amp; Yumna Fatima Dar. They were superstars!</p>
+						<p>Thanks to BoodleBox and Lipscomb univeristy for hosting this conference.</p>
+						<p>Any questions? Email me at <a href="mailto:jhopkins1@brynmawr.edu">jhopkins1@brynmawr.edu</a>.</p>
+					</section>
+				</section>
+			</div>
+		</div>
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			Reveal.initialize({
+				hash: true,
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>
